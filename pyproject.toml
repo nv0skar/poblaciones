@@ -1,0 +1,23 @@
+[project]
+name = "poblacion"
+version = "0.1.0"
+dependencies = ['matplotlib']
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[project.scripts]
+"entrenos" = "poblacion:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/poblacion"]
